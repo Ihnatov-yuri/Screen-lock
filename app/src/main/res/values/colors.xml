@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palette: paper, ink, hairline, single orange accent. -->
+    <color name="paper">#F5F1E8</color>
+    <color name="sheet">#FFFFFF</color>
+    <color name="ink">#111111</color>
+    <color name="ink_soft">#4A4A4A</color>
+    <color name="mono">#7A7A7A</color>
+    <color name="hairline">#D7D2C5</color>
+    <color name="accent">#FF4726</color>
+    <color name="inverse_bg">#111111</color>
+
+    <!-- Launcher icon: ink-dark background, orange dot foreground. -->
+    <color name="ic_launcher_background">#111111</color>
+</resources>

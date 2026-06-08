@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/paper"
+    android:scrollbars="none">
+
+    <!-- The page is a sheet of paper. Margin = paper, content = sheet. -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sheet_bg">
+
+            <!-- ===== Header ===== -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rainlock"
+                    android:textColor="@color/ink"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.02" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="·"
+                    android:textColor="@color/accent"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/fraunces"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"
+                    android:paddingStart="2dp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="V.01"
+                    android:textColor="@color/mono"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12"
+                    android:paddingBottom="8dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@drawable/ink_rule" />
+
+            <!-- Tagline strip: evidence, not adjectives. -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A TOUCH-BLOCKING OVERLAY FOR MOTORCYCLE NAVIGATION IN THE RAIN."
+                    android:textColor="@color/ink_soft"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.08"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@drawable/ink_rule" />
+
+            <!-- ===== 01 / KEY ===== -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01"
+                    android:textColor="@color/ink"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / KEY"
+                    android:textColor="@color/mono"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowVolUp"
+                style="@style/RowStyle">
+                <TextView style="@style/RowLabel" android:text="VOL UP" />
+                <Space style="@style/RowSpacer" />
+                <View android:id="@+id/dotVolUp" style="@style/RowDot" />
+            </LinearLayout>
+            <View style="@style/Hairline" />
+
+            <LinearLayout
+                android:id="@+id/rowVolDown"
+                style="@style/RowStyle">
+                <TextView style="@style/RowLabel" android:text="VOL DOWN" />
+                <Space style="@style/RowSpacer" />
+                <View android:id="@+id/dotVolDown" style="@style/RowDot" />
+            </LinearLayout>
+            <View style="@style/Hairline" />
+
+            <LinearLayout
+                android:id="@+id/rowEither"
+                style="@style/RowStyle">
+                <TextView style="@style/RowLabel" android:text="EITHER · SAME KEY REPEATED" />
+                <Space style="@style/RowSpacer" />
+                <View android:id="@+id/dotEither" style="@style/RowDot" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@drawable/ink_rule" />
+
+            <!-- ===== 02 / TIMING ===== -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02"
+                    android:textColor="@color/ink"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / TIMING"
+                    android:textColor="@color/mono"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12" />
+            </LinearLayout>
+
+            <!-- Press count, Fraunces big numeral -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    android:id="@+id/countNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/ink"
+                    android:textSize="48sp"
+                    android:fontFamily="@font/fraunces"
+                    android:fontFeatureSettings="tnum"
+                    android:fontVariationSettings="'opsz' 144, 'wght' 400"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:letterSpacing="-0.04" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRESSES"
+                    android:textColor="@color/mono"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.14"
+                    android:paddingStart="10dp"
+                    android:paddingBottom="10dp" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/countSeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="0dp"
+                android:progressTint="@color/ink"
+                android:progressBackgroundTint="@color/hairline"
+                android:thumbTint="@color/ink" />
+
+            <View style="@style/Hairline" android:layout_marginTop="10dp" />
+
+            <!-- Window, Fraunces big numeral -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="6dp">
+
+                <TextView
+                    android:id="@+id/windowNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.0"
+                    android:textColor="@color/ink"
+                    android:textSize="48sp"
+                    android:fontFamily="@font/fraunces"
+                    android:fontFeatureSettings="tnum"
+                    android:fontVariationSettings="'opsz' 144, 'wght' 400"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.04" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEC WINDOW"
+                    android:textColor="@color/mono"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.14"
+                    android:paddingStart="10dp"
+                    android:paddingBottom="10dp" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/windowSeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:progressTint="@color/ink"
+                android:progressBackgroundTint="@color/hairline"
+                android:thumbTint="@color/ink" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@drawable/ink_rule" />
+
+            <!-- ===== 03 / DISPLAY ===== -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03"
+                    android:textColor="@color/ink"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / DISPLAY"
+                    android:textColor="@color/mono"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowDim"
+                style="@style/RowStyle">
+                <TextView style="@style/RowLabel" android:text="DIM OVERLAY" />
+                <Space style="@style/RowSpacer" />
+                <TextView
+                    android:id="@+id/dimState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textColor="@color/mono"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.14"
+                    android:paddingEnd="10dp" />
+                <View android:id="@+id/dotDim" style="@style/RowDot" />
+            </LinearLayout>
+
+            <!-- ===== Inverse block / CTA ===== -->
+            <LinearLayout
+                android:id="@+id/startBlock"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/inverse_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="14dp">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/orange_dot" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="START LOCK"
+                    android:textColor="@color/sheet"
+                    android:textSize="22sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.01"
+                    android:paddingStart="14dp"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="→"
+                    android:textColor="@color/sheet"
+                    android:textSize="22sp"
+                    android:fontFamily="sans-serif-condensed" />
+            </LinearLayout>
+
+            <!-- Footer note: mono caps, evidence-style. -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOTES"
+                    android:textColor="@color/ink"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.14" />
+
+                <View style="@style/Hairline" android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="01 — OPEN YOUR NAV APP FIRST. START WAITS 3 SEC."
+                    android:textColor="@color/ink_soft"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="02 — UNLOCK BY PRESSING THE KEY THE COUNT TIMES INSIDE THE WINDOW."
+                    android:textColor="@color/ink_soft"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="03 — POWER BUTTON CANNOT BE INTERCEPTED BY ANDROID APPS. SCREEN STAYS ON WHILE LOCKED."
+                    android:textColor="@color/ink_soft"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="6dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@drawable/ink_rule" />
+
+            <!-- ===== About / colophon ===== -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ABOUT"
+                    android:textColor="@color/ink"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.14" />
+
+                <View style="@style/Hairline" android:layout_marginTop="6dp" android:layout_marginHorizontal="0dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BUILT BY YURI IHNATOV"
+                    android:textColor="@color/ink_soft"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.10"
+                    android:paddingTop="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/aboutLink"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IHNATOV.NL"
+                        android:textColor="@color/ink"
+                        android:textSize="13sp"
+                        android:fontFamily="monospace"
+                        android:letterSpacing="0.10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="↗"
+                        android:textColor="@color/ink"
+                        android:textSize="13sp"
+                        android:fontFamily="monospace"
+                        android:paddingStart="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
